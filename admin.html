@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ku" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#171714">
+<title>HARNaz Studio | بەڕێوەبردنی سایت</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/harnaz-monogram.png"><link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="index.html"><span class="mark">H<span>A</span></span><span><b>HARNAZ</b><small>INTERIOR DESIGN</small></span></a><a class="back" href="index.html">گەڕانەوە بۆ سایت ↗</a></header>
+<main class="shell">
+  <section id="setup-warning" class="notice hidden">هێشتا پەیوەندی Supabase ڕێکنەخراوە. تکایە ڕێنمایی فایلەکەی README بخوێنەوە و supabase-config.js پڕبکەرەوە.</section>
+  <section id="login-panel" class="panel login-panel">
+    <p class="eyebrow">PRIVATE STUDIO ACCESS</p><h1>بەخێربێیتەوە</h1><p class="muted">تەنها بە ئیمەیڵ و وشەی نهێنی خۆت بچۆ ژوورەوە.</p>
+    <form id="login-form">
+      <label for="email">ئیمەیڵ</label><input id="email" type="email" autocomplete="username" required placeholder="name@example.com">
+      <label for="password">وشەی نهێنی</label><input id="password" type="password" autocomplete="current-password" required placeholder="••••••••••">
+      <button class="primary" type="submit">چوونەژوورەوە</button><p id="login-message" class="message" role="status"></p>
+    </form>
+  </section>
+  <section id="dashboard" class="hidden">
+    <div class="welcome"><div><p class="eyebrow">HARNaz Studio / ADMIN</p><h1>بەڕێوەبردنی پۆرتفۆلیۆ</h1><p class="muted">وێنەی پڕۆژە نوێکان زیاد بکە؛ بە خۆکار لە سایتەکەدا دەردەکەون.</p></div><button id="logout" class="logout">دەرچوون</button></div>
+    <div class="panel upload-panel"><h2>زیادکردنی وێنەی نوێ</h2><form id="upload-form">
+      <label for="title">ناوی پڕۆژە</label><input id="title" type="text" maxlength="90" required placeholder="بۆ نموونە: Luxury Dressing Room">
+      <label for="category">جۆری پڕۆژە</label><select id="category" required><option value="">جۆرێک هەڵبژێرە</option><option>Kitchen Design</option><option>Dressing Room</option><option>Wardrobe & Closet</option><option>Living Space</option><option>Bedroom Design</option><option>Interior Decoration</option><option>Custom Furniture</option></select>
+      <label for="image-file">وێنەی پڕۆژە</label><input id="image-file" type="file" accept="image/jpeg,image/png,image/webp,image/avif" required><small class="helper">JPG، PNG، WEBP یان AVIF — تا 10MB</small>
+      <button class="primary" id="upload-button" type="submit">بارکردن و زیادکردنی وێنە</button><p id="upload-message" class="message" role="status"></p>
+    </form></div>
+    <div class="list-head"><h2>وێنە زیادکراوەکان</h2><span id="item-count">0 وێنە</span></div>
+    <div id="items" class="items-grid"></div>
+  </section>
+  <footer>© <span id="year"></span> HARNaz Studio · Private administrator</footer>
+</main>
+<script type="module" src="admin.js"></script>
+</body></html>

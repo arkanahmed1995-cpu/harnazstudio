@@ -50,3 +50,10 @@ body[dir=rtl]{font-family:"Noto Sans Arabic","DM Sans",sans-serif}body[dir=rtl] 
 /* Header cleanup: the hero navigation is the single site header. */
 body > main { margin-top: 0; }
 .hero { margin-top: 0; }
+
+\n/* Portfolio category filters */
+.portfolio-filters{display:flex;flex-wrap:wrap;gap:10px;margin:34px 0 28px}
+.portfolio-filter{border:1px solid #c9c0b2;background:transparent;color:#625b50;padding:12px 17px;font-size:10px;letter-spacing:.07em;cursor:pointer;transition:all .2s}
+.portfolio-filter:hover,.portfolio-filter.active{background:#292722;border-color:#292722;color:#f5f1e9}
+.real-gallery .project-card[hidden]{display:none!important}
+@media(max-width:700px){.portfolio-filters{gap:8px;margin:25px 0 20px}.portfolio-filter{font-size:9px;padding:10px 12px}}

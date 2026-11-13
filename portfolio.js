@@ -19,6 +19,12 @@ if (configured) {
           const { data: urlData } = supabase.storage.from(STORAGE_BUCKET).getPublicUrl(item.image_path);
           const card = document.createElement("div");
           card.className = "project-card uploaded-project";
+          const categoryText = String(item.category || "").toLowerCase();
+          if (/dress|closet|wardrobe|clothes|جلد|ملابس|خزان/.test(categoryText)) card.dataset.category = "closet";
+          else if (/bed|bedroom|sleep|نووستن|نوم/.test(categoryText)) card.dataset.category = "bedroom";
+          else if (/kitchen|چێشت|مطبخ/.test(categoryText)) card.dataset.category = "kitchen";
+          else if (/living|lounge|sitting|دانیشتن|معيشة/.test(categoryText)) card.dataset.category = "living";
+          else card.dataset.category = "other";
           const link = document.createElement("a");
           link.className = "project-photo";
           link.href = urlData.publicUrl;
@@ -37,7 +43,7 @@ if (configured) {
           category.textContent = item.category || "Interior design";
           label.append(title, category);
           card.append(link, label);
-          gallery.appendChild(card);
+          gallery.appendChild(card);\n          if (window.harnazApplyPortfolioFilter) window.harnazApplyPortfolioFilter();
         }
       }
     } catch (error) {

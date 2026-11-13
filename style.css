@@ -166,3 +166,77 @@ body[dir="rtl"] .project-label {
     gap: 20px;
   }
 }
+
+/* HARNaz Studio - Luxury Services Design */
+
+.services {
+  background: linear-gradient(135deg, #eee7da, #e5dac8);
+  position: relative;
+}
+
+.services .section-tag {
+  color: #9b8060;
+}
+
+.service-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid #cbbda9;
+  background: #cbbda9;
+  margin-top: 50px;
+}
+
+.service {
+  background: #eee7da;
+  padding: 35px 28px;
+  min-height: 205px;
+  border: 0;
+  transition: background .3s ease, transform .3s ease;
+}
+
+.service:hover {
+  background: #f8f4ed;
+  transform: translateY(-4px);
+}
+
+.service h3 {
+  color: #393027;
+  font-size: 23px;
+  margin: 24px 0 12px;
+}
+
+.service p {
+  color: #756b5e;
+  line-height: 2;
+}
+
+.service > span {
+  color: #a58b68;
+  letter-spacing: .15em;
+}
+
+body[dir="rtl"] .services {
+  direction: rtl;
+  text-align: right;
+}
+
+body[dir="rtl"] .service {
+  text-align: right;
+}
+
+@media (max-width: 700px) {
+  .service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .service {
+    padding: 25px 18px;
+    min-height: 180px;
+  }
+}
+
+@media (max-width: 430px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -8,7 +8,7 @@ document.getElementById("menu").addEventListener("click",()=>document.querySelec
 document.querySelectorAll(".hero-nav a").forEach(a=>a.addEventListener("click",()=>document.querySelector(".hero-nav").classList.remove("open")));
 document.getElementById("year").textContent=new Date().getFullYear();
 setLanguage(localStorage.getItem("harnaz-lang")||"en");
-\n// HARNaz Studio portfolio category filters
+// HARNaz Studio portfolio category filters
 function harnazCategoryKey(value) {
   const v = String(value || "").toLowerCase();
   if (/dress|closet|wardrobe|clothes|جلد|ملابس|خزان/.test(v)) return "closet";

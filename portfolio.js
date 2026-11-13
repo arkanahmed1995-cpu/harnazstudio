@@ -43,7 +43,7 @@ if (configured) {
           category.textContent = item.category || "Interior design";
           label.append(title, category);
           card.append(link, label);
-          gallery.appendChild(card);\n          if (window.harnazApplyPortfolioFilter) window.harnazApplyPortfolioFilter();
+          gallery.appendChild(card);          if (window.harnazApplyPortfolioFilter) window.harnazApplyPortfolioFilter();
         }
       }
     } catch (error) {
